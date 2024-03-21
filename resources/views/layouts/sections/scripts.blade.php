@@ -4,6 +4,7 @@
 <script src="{{ asset(mix('assets/vendor/js/bootstrap.js')) }}"></script>
 <script src="{{ asset(mix('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js')) }}"></script>
 <script src="{{ asset(mix('assets/vendor/js/menu.js')) }}"></script>
+<script src="{{ asset(mix('assets/vendor/js/menu.js')) }}"></script>
 @yield('vendor-script')
 <!-- END: Page Vendor JS-->
 <!-- BEGIN: Theme JS-->
@@ -15,4 +16,6 @@
 <!-- END: Pricing Modal JS-->
 <!-- BEGIN: Page JS-->
 @yield('page-script')
+<script src="{{ asset(mix('assets/vendor/js/tracking.js')) }}"></script>
+
 <!-- END: Page JS-->
