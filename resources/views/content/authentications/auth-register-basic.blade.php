@@ -22,10 +22,10 @@
             </a>
           </div>
           <!-- /Logo -->
-          <h4 class="mb-2">Welcome to {{config('variables.templateName')}}! 👋</h4>
-          <p class="mb-4">Please sign-in to your account and start the adventure</p>
+          <h4 class="mb-2">ENABLED TRACKING</h4>
+          <p class="mb-4">Registre-se Abaixo</p>
 
-          <form id="formAuthentication" class="mb-3" action="{{route('cadastro_user')}}" method="POST">
+           <form id="formAuthentication" class="mb-3" action="{{ route('registra') }}" method="post">
             @csrf
               <div class="mb-3">
               <label for="email" class="form-label">Identificador</label>

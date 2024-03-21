@@ -16,6 +16,6 @@
 <!-- END: Pricing Modal JS-->
 <!-- BEGIN: Page JS-->
 @yield('page-script')
-<script src="{{ asset(mix('assets/vendor/js/tracking.js')) }}"></script>
+<script src="{{ asset('resources/assets/js/tracking.js') }}"></script>
 
 <!-- END: Page JS-->

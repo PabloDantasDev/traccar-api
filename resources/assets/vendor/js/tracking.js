@@ -79,7 +79,7 @@
        function updateMarkers() {
     fetchPositionsData().then((positions) => {
         positions.forEach((position) => {
-            if (position.deviceId === 45) { 
+            if (position.deviceId === 53) { 
                 // Verifica se o ID do dispositivo é 45
                 var device = devices.find((d) => d.id === position.deviceId);
                 if (device) {

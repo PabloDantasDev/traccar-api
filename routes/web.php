@@ -46,7 +46,7 @@ use App\Http\Controllers\form_layouts\HorizontalForm;
 use App\Http\Controllers\tables\Basic as TablesBasic;
 
 // Main Page Route
-Route::get('/', [Analytics::class, 'index'])->name('auth/login-basic');
+Route::get('/', [Analytics::class, 'index'])->name('login-basic');
 
 // layout
 Route::get('/layouts/without-menu', [WithoutMenu::class, 'index'])->name('layouts-without-menu');
@@ -72,7 +72,15 @@ Route::get('/pages/misc-under-maintenance', [MiscUnderMaintenance::class, 'index
 
 // authentication
 Route::get('/auth/login-basic', [LoginBasic::class, 'index'])->name('auth-login-basic');
+Route::post('/auth/login', [LoginBasic::class, 'execute'])->name('login');
+
 Route::get('/auth/register-basic', [RegisterBasic::class, 'index'])->name('auth-register-basic');
+
+Route::post('/auth/register', [RegisterBasic::class, 'registra'])->name('registra');
+
+
+
+
 Route::get('/auth/forgot-password-basic', [ForgotPasswordBasic::class, 'index'])->name('auth-reset-password-basic');
 
 // cards

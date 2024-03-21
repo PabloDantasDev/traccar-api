@@ -16,25 +16,28 @@
         <div class="card-body">
           <!-- Logo -->
           <div class="app-brand justify-content-center">
-            <a href="{{url('/')}}" class="app-brand-link gap-2">
-              <span class="app-brand-logo demo">@include('_partials.macros',["width"=>25,"withbg"=>'var(--bs-primary)'])</span>
-              <span class="app-brand-text demo text-body fw-bold">{{config('variables.templateName')}}</span>
+            <a href="{{url('/')}}" class="app-brand-link gap-1">
+              <img src="https://enabled.com.br/wp-content/uploads/2024/01/logo_portal.png" alt="">
             </a>
           </div>
           <!-- /Logo -->
-          <h4 class="mb-2">Welcome to {{config('variables.templateName')}}! 👋</h4>
-          <p class="mb-4">Please sign-in to your account and start the adventure</p>
+          <h3 class="mb-2">Faça Login</h3>
 
-          <form id="formAuthentication" class="mb-3" action="{{url('/')}}" method="GET">
+           <form id="formAuthentication" class="mb-3" action="{{ route('login') }}" method="post">
+
+            @csrf
+            @error('email')
+              <div class="text-danger">credencias invalidas</div>
+            @enderror
             <div class="mb-3">
-              <label for="email" class="form-label">Email or Username</label>
-              <input type="text" class="form-control" id="email" name="email-username" placeholder="Enter your email or username" autofocus>
+              <label for="email" class="form-label">Email</label>
+              <input type="text" class="form-control" id="email" name="email" placeholder="Digite seu E-mail" autofocus>
             </div>
             <div class="mb-3 form-password-toggle">
               <div class="d-flex justify-content-between">
                 <label class="form-label" for="password">Password</label>
                 <a href="{{url('auth/forgot-password-basic')}}">
-                  <small>Forgot Password?</small>
+                  <small>Esqueci a Senha!</small>
                 </a>
               </div>
               <div class="input-group input-group-merge">
@@ -46,7 +49,7 @@
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="remember-me">
                 <label class="form-check-label" for="remember-me">
-                  Remember Me
+                  Lembrar Acesso
                 </label>
               </div>
             </div>
@@ -56,9 +59,9 @@
           </form>
 
           <p class="text-center">
-            <span>New on our platform?</span>
+            <span>Não tem acesso ? </span>
             <a href="{{url('auth/register-basic')}}">
-              <span>Create an account</span>
+              <span>Obter Acesso!</span>-
             </a>
           </p>
         </div>
