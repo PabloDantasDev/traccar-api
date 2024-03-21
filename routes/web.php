@@ -43,6 +43,7 @@ use App\Http\Controllers\form_elements\BasicInput;
 use App\Http\Controllers\form_elements\InputGroups;
 use App\Http\Controllers\form_layouts\VerticalForm;
 use App\Http\Controllers\form_layouts\HorizontalForm;
+use App\Http\Controllers\Logout;
 use App\Http\Controllers\tables\Basic as TablesBasic;
 
 // Main Page Route
@@ -124,3 +125,6 @@ Route::get('/form/layouts-horizontal', [HorizontalForm::class, 'index'])->name('
 
 // tables
 Route::get('/tables/basic', [TablesBasic::class, 'index'])->name('tables-basic');
+
+
+Route::get('/logout', [Logout::class, 'index'])->name('logout');

@@ -14,7 +14,7 @@
       "name": "DEVICES",
       "icon": "menu-icon tf-icons bx bx-map",
       "slug": "dashboard",
-       "submenu": [
+      "submenu": [
         {
           "url": "pages/account-settings-account",
           "name": "Conta",
@@ -23,8 +23,6 @@
         }
       ]
     },
-   
-
     {
       "menuHeader": "CONTA"
     },
@@ -65,6 +63,12 @@
           "target": "_blank"
         }
       ]
+    },
+    {
+      "url": "/logout",
+      "name": "SAIR",
+      "icon": "menu-icon tf-icons bx bx-log-out-circle",
+      "slug": "auth"
     }
   ]
 }
