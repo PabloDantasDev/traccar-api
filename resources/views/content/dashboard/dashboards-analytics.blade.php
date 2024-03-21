@@ -13,11 +13,6 @@
         height: 100vh;
         width: 100%;
     }
-
-    #btn{
-        z-index: 1111;
-        padding: 20px;
-    }
      
 </style>
 @endsection
@@ -33,7 +28,6 @@
 
 @section('content')
 <div id="map"></div>
-<button class="btn btn-info">CADASTRAR DEVICE</button>
 
 
 
