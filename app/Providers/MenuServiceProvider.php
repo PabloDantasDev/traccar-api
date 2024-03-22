@@ -21,7 +21,7 @@ class MenuServiceProvider extends ServiceProvider
   {
     $verticalMenuJson = file_get_contents(base_path('resources/menu/verticalMenu.json'));
     $verticalMenuData = json_decode($verticalMenuJson);
-
+e3r3r3r3r
     // Share all menuData to all the views
     \View::share('menuData', [$verticalMenuData]);
   }

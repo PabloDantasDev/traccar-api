@@ -46,8 +46,6 @@ use App\Http\Controllers\form_layouts\HorizontalForm;
 use App\Http\Controllers\Logout;
 use App\Http\Controllers\tables\Basic as TablesBasic;
 
-// Main Page Route
-Route::get('/', [Analytics::class, 'index'])->name('login-basic');
 
 // layout
 Route::get('/layouts/without-menu', [WithoutMenu::class, 'index'])->name('layouts-without-menu');
@@ -55,6 +53,11 @@ Route::get('/layouts/without-navbar', [WithoutNavbar::class, 'index'])->name('la
 Route::get('/layouts/fluid', [Fluid::class, 'index'])->name('layouts-fluid');
 Route::get('/layouts/container', [Container::class, 'index'])->name('layouts-container');
 Route::get('/layouts/blank', [Blank::class, 'index'])->name('layouts-blank');
+
+
+
+// Main Page Route
+Route::get('/', [Analytics::class, 'index'])->name('login-basic')->middleware('auth','isAdmin');
 
 // pages
 Route::get('/pages/account-settings-account', [AccountSettingsAccount::class, 'index'])->name(
