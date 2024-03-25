@@ -93,5 +93,12 @@
     "jquery": "3.7.0",
     "masonry-layout": "4.2.2",
     "perfect-scrollbar": "1.5.5"
-  }
+  },
+  "description": "<p align=\"center\"></p>",
+  "main": "webpack.mix.js",
+  "directories": {
+    "test": "tests"
+  },
+  "author": "",
+  "license": "ISC"
 }
